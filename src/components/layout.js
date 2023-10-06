@@ -17,16 +17,17 @@ export default function Layout({ children }) {
   };
 
   return (
-    <>
+    <div className="h-screen">
       <Navbar
         isDrawerOpen={isDrawerOpen}
         setIsDrawerOpen={setisDrawerOpen}
         toggleDrawer={toggleDrawer}
         toggleEcommerce={toggleEcommerce}
         isDrawerOpenEcommerce={isDrawerOpenEcommerce}
+        className="h-1/6"
       />
       <main>{children}</main>
-      <Footer />
-    </>
+      <Footer className="h-0.5/6" />
+    </div>
   );
 }
