@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { PiSignInBold } from "react-icons/pi";
@@ -18,6 +19,7 @@ export default function Navbar({
   toggleEcommerce,
   isDrawerOpenEcommerce,
 }) {
+  const router = useRouter();
   const drawerRef = useRef(null);
   useEffect(() => {
     function handleOutsideClick(event) {
@@ -37,9 +39,14 @@ export default function Navbar({
     };
   }, [isDrawerOpen]);
 
+  const goHome = () => {
+    router.push("/home");
+    toggleDrawer();
+  }
+
   return (
     <>
-      <div className="text-center">
+      <div className="text-center sticky top-0">
         <button
           className="text-white w-90% bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium  text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           type="button"
@@ -48,12 +55,12 @@ export default function Navbar({
           data-drawer-body-scrolling="true"
           aria-controls="drawer-body-scrolling"
           onClick={toggleDrawer}
-        >
+          >
           DECOUVRIR NOS MENUS ET COMMANDEZ
         </button>
       </div>
       <div
-        ref={drawerRef}
+          ref={drawerRef}
         id="drawer-body-scrolling"
         className={`fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform ${
           isDrawerOpen ? "-translate-x-full" : ""
@@ -81,11 +88,16 @@ export default function Navbar({
           <ul className="space-y-2 font-medium">
             <li>
               <a
-                href="#"
+                onClick={goHome}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
-                <Image  alt="Latnight Food Restaurant" src="/Latnight-logos.jpeg" width={20} height={20} />
-                <span className="ml-3">Latnight Food</span>
+                <Image
+                  alt="Latnight Food Restaurant"
+                  src="/Latnight-logos.jpeg"
+                  width={20}
+                  height={20}
+                />
+                <span className="ml-3" >Latnight Food - Home</span>
               </a>
             </li>
             <li>
@@ -113,6 +125,7 @@ export default function Navbar({
                   <Link
                     href="/burgers"
                     className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    onClick={toggleDrawer}
                   >
                     Burgers
                   </Link>
@@ -121,6 +134,7 @@ export default function Navbar({
                   <a
                     href="#"
                     className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    onClick={toggleDrawer}
                   >
                     Pizzas
                   </a>
@@ -129,6 +143,7 @@ export default function Navbar({
                   <a
                     href="#"
                     className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    onClick={toggleDrawer}
                   >
                     Frites & Potatoes
                   </a>
@@ -137,6 +152,7 @@ export default function Navbar({
                   <a
                     href="#"
                     className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                    onClick={toggleDrawer}
                   >
                     Boissons
                   </a>
@@ -147,6 +163,7 @@ export default function Navbar({
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={toggleDrawer}
               >
                 <MdManageAccounts />
                 <span className="flex-1 ml-3 whitespace-nowrap">
@@ -158,6 +175,7 @@ export default function Navbar({
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={toggleDrawer}
               >
                 <BsFillBagFill />
                 <span className="flex-1 ml-3 whitespace-nowrap">Panier</span>
@@ -167,6 +185,7 @@ export default function Navbar({
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={toggleDrawer}
               >
                 <BsFillBoxFill />
                 <span className="flex-1 ml-3 whitespace-nowrap">
@@ -181,6 +200,7 @@ export default function Navbar({
               <Link
                 href="/login"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={toggleDrawer}
               >
                 <PiSignInBold />
                 <span className="flex-1 ml-3 whitespace-nowrap">Sign In</span>
@@ -190,6 +210,7 @@ export default function Navbar({
               <Link
                 href="/signup"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={toggleDrawer}
               >
                 <SiGnuprivacyguard />
                 <span className="flex-1 ml-3 whitespace-nowrap">Sign Up</span>
@@ -199,6 +220,7 @@ export default function Navbar({
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={toggleDrawer}
               >
                 <AiOutlineLogout />
                 <span className="flex-1 ml-3 whitespace-nowrap">Logout</span>
@@ -208,6 +230,7 @@ export default function Navbar({
               <a
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                onClick={toggleDrawer}
               >
                 <GrMail />
                 <span className="flex-1 ml-3 whitespace-nowrap">

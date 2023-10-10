@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         toggleDrawer={toggleDrawer}
         toggleEcommerce={toggleEcommerce}
         isDrawerOpenEcommerce={isDrawerOpenEcommerce}
-        className="h-1/6"
+        className="h-1/6 "
       />
       <main>{children}</main>
       <Footer className="h-0.5/6" />
