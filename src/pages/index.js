@@ -1,14 +1,26 @@
 import Link from "next/link";
-import 'animate.css';
-
-
+import "animate.css";
 
 export default function Home() {
   return (
-    <div className="bg-[url('/hamburger.jpg')] h-screen w-full bg-cover  text-white">
-      <h1 className="animate__backInLeft text-white text-2xl w-full h-1/6 flex justify-center items-center">Home</h1>
+    <div className="h-screen bg-white w-full grid grid-cols-4">
+      <div className="flex-col grid grid-rows-2 col-start-1 col-span-1">
+        01
+        <div className="row-start-1 flex justify-center items-center">
+          fdsfds
+        </div>
+        <div className="row-start-2 flex justify-center items-center">
+          fdsfds
+        </div>
+      </div>
+      <div className="col-start-2 col-span-3 ">02</div>
 
-
+      <div className="bg-[url('/pizza.jpg')] bg-cover col-start-1 col-span-2">
+        03
+      </div>
+      <div className="bg-[url('/hamburger.jpg')] bg-cover col-start-3 col-span-4">
+        04
+      </div>
     </div>
   );
 }

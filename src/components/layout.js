@@ -17,7 +17,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-screen w-full">
       <Navbar
         isDrawerOpen={isDrawerOpen}
         setIsDrawerOpen={setisDrawerOpen}
