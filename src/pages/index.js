@@ -15,10 +15,14 @@ export default function Home() {
       </div>
       <div className="col-start-2 col-span-3 ">02</div>
 
-      <div className="bg-[url('/pizza.jpg')] bg-cover col-start-1 col-span-2">
+      <div className="bg-[url('/pizza.jpg')] bg-cover col-start-1 col-span-2"
+      alt="pizza"
+      >
         03
       </div>
-      <div className="bg-[url('/hamburger.jpg')] bg-cover col-start-3 col-span-4">
+      <div className="bg-[url('/hamburger.jpg')] bg-cover col-start-3 col-span-4"
+      alt="hamburger"
+      >
         04
       </div>
     </div>
