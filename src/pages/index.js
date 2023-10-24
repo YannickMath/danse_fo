@@ -1,30 +1,22 @@
 import Link from "next/link";
-import "animate.css";
+import { useState } from "react";
+import BurgerCard from "@/components/burgerCard";
 
-export default function Home() {
+export default function Home({ toggleDrawer }) {
   return (
-    <div className="h-screen bg-white w-full grid grid-cols-4">
-      <div className="flex-col grid grid-rows-2 col-start-1 col-span-1">
-        01
-        <div className="row-start-1 flex justify-center items-center">
-          fdsfds
-        </div>
-        <div className="row-start-2 flex justify-center items-center">
-          fdsfds
-        </div>
-      </div>
-      <div className="col-start-2 col-span-3 ">02</div>
+    <div className="min-h-screen bg-white w-full sm:grid grid-cols-4 grid-rows-3 space-x-1">
+      <BurgerCard className="flex-col p-1 col-start-1 col-span-1 row-span-1" />
+      <div className="col-start-2 col-span-2 row-span-1 bg-[url('/logo.png')] bg-cover rounded-lg mb-1 "></div>
+      <BurgerCard className="flex-col p-1 col-start-1 col-span-1 row-span-1" />
 
-      <div className="bg-[url('/pizza.jpg')] bg-cover col-start-1 col-span-2"
-      alt="pizza"
-      >
-        03
-      </div>
-      <div className="bg-[url('/hamburger.jpg')] bg-cover col-start-3 col-span-4"
-      alt="hamburger"
-      >
-        04
-      </div>
+      <div
+        className="bg-[url('/pizza.jpg')] bg-cover col-start-1 col-span-2 row-span-2 rounded-lg "
+        alt="pizza"
+      ></div>
+      <div
+        className="bg-[url('/hamburger.jpg')] bg-cover col-start-3 col-span-4 row-span-2 rounded-lg "
+        alt="hamburger"
+      ></div>
     </div>
   );
 }

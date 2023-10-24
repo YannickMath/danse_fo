@@ -11,9 +11,10 @@ import { GrMail } from "react-icons/gr";
 import { MdFastfood } from "react-icons/md";
 import { SiGnuprivacyguard } from "react-icons/si";
 import { MdManageAccounts } from "react-icons/md";
+import { GrRestaurant } from "react-icons/gr";
 import Image from "next/image";
 
-export default function Navbar({
+export default function Drawer({
   isDrawerOpen,
   toggleDrawer,
   toggleEcommerce,
@@ -21,46 +22,49 @@ export default function Navbar({
 }) {
   const router = useRouter();
   const drawerRef = useRef(null);
-  useEffect(() => {
-    function handleOutsideClick(event) {
-      if (
-        drawerRef.current &&
-        !drawerRef.current.contains(event.target) &&
-        !isDrawerOpen
-      ) {
-        toggleDrawer();
-      }
-    }
+  // useEffect(() => {
+  //   function handleOutsideClick(event) {
+  //     if (
+  //       drawerRef.current &&
+  //       !drawerRef.current.contains(event.target) &&
+  //       !isDrawerOpen
+  //     ) {
+  //       toggleDrawer();
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleOutsideClick);
+  //   document.addEventListener("mousedown", handleOutsideClick);
 
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [isDrawerOpen]);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleOutsideClick);
+  //   };
+  // }, [isDrawerOpen]);
 
   const goHome = () => {
     router.push("/home");
     toggleDrawer();
-  }
+  };
 
   return (
     <>
-      <div className="text-center sticky top-0">
+      <div className="text-center  sticky top-0 flex justify-center alignItems-center ml-2">
         <button
-          className="text-white w-90% bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium  text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          className="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium  text-sm px-5 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           type="button"
           data-drawer-target="drawer-body-scrolling"
           data-drawer-show="drawer-body-scrolling"
           data-drawer-body-scrolling="true"
           aria-controls="drawer-body-scrolling"
           onClick={toggleDrawer}
-          >
-          DECOUVRIR NOS MENUS ET COMMANDEZ
+        >
+          <div className="flex items-center justify-center space-x-2 ">
+            <GrRestaurant size={30} className="text-2xl bounce2 " />
+            <h1 className="text-xl ">LATE NIGHT FOOD - DECOUVRIR NOS MENUS ET COMMANDEZ</h1>
+          </div>
         </button>
       </div>
       <div
-          ref={drawerRef}
+        ref={drawerRef}
         id="drawer-body-scrolling"
         className={`fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform ${
           isDrawerOpen ? "-translate-x-full" : ""
@@ -97,7 +101,7 @@ export default function Navbar({
                   width={20}
                   height={20}
                 />
-                <span className="ml-3" >Latnight Food - Home</span>
+                <span className="ml-3">Latnight Food - Home</span>
               </a>
             </li>
             <li>

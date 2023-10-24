@@ -1,4 +1,4 @@
-import Navbar from "./navbar";
+import Drawer from "./drawer";
 import Footer from "./footer";
 import { useState, useEffect } from "react";
 
@@ -17,17 +17,22 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div className="h-screen w-full">
-      <Navbar
+    <div >
+      <Drawer
         isDrawerOpen={isDrawerOpen}
         setIsDrawerOpen={setisDrawerOpen}
         toggleDrawer={toggleDrawer}
         toggleEcommerce={toggleEcommerce}
         isDrawerOpenEcommerce={isDrawerOpenEcommerce}
-        className="h-1/6 "
+        className="h-1/6 w-100% "
       />
-      <main>{children}</main>
-      <Footer className="h-0.5/6" />
+      <main
+      className="p-2"
+
+      >{children
+
+      }</main>
+      <Footer className="h-0.5/6 " />
     </div>
   );
 }

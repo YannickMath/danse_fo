@@ -27,17 +27,17 @@ const [burgers, setBurgers] = useState([])
 
     const burgerDetails = burgers.map((burger, i) => {
             return (
-                <div key={i} className="bg-red-200 lg:flex items-center ">
-                   < div>
+                <div key={i} className=" lg:flex items-center p-1  bg-blue-200 p-2">
+                < div className="w-1/2">
                     <Image
-                        className="w-40% bg-cover"
+                        className="w-40% bg-cover rounded-lg"
                         width={330}
                         height={330}
                         src="/hamburger.jpg"
                         alt="hamburger"
                     />
                     </div>
-                    <div className="flex-column justify-center items-center">
+                    <div className="flex-col flex justify-center items-center text-center w-1/2 p-1 h-auto">
                         <h2>{burger.name}</h2>
                         <p>{burger.description}</p>
                         <p>{burger.price}</p>
