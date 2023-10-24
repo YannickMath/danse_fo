@@ -1,13 +1,25 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { IoIosBasket } from "react-icons/io";
+import { RiDeleteBackLine} from "react-icons/ri";
 
 export default function Burgers() {
 
 const [burgers, setBurgers] = useState([])
+const [count, setCount] = useState(0)
+
 
    useEffect(() => {
     handleFetchBurgers()
     }, [])
+
+    const handleShoppingCart = () => {
+        setCount(count + 1)
+    }
+
+    const handleRemoveShoppingCart = () => {
+        setCount(count - 1)
+    }
 
 
 
@@ -27,7 +39,7 @@ const [burgers, setBurgers] = useState([])
 
     const burgerDetails = burgers.map((burger, i) => {
             return (
-                <div key={i} className=" lg:flex items-center p-1  bg-blue-200 p-2">
+                <div key={i} className=" lg:flex items-center p-1 bg-yellow-50 p-2">
                 < div className="w-1/2">
                     <Image
                         className="w-40% bg-cover rounded-lg"
@@ -37,10 +49,17 @@ const [burgers, setBurgers] = useState([])
                         alt="hamburger"
                     />
                     </div>
-                    <div className="flex-col flex justify-center items-center text-center w-1/2 p-1 h-auto">
-                        <h2>{burger.name}</h2>
+                    <div className="flex-col flex justify-around items-center text-center w-1/2 p-1 h-full slide">
+                        <h2 className="text-xl underline decoration-solid ">{burger.nom}</h2>
                         <p>{burger.description}</p>
-                        <p>{burger.price}</p>
+                        <div className="flex justify-around w-full text-right space-x-4 items-center">
+                        <p className="w-full text-right">{burger.prix} €</p>
+                        <IoIosBasket className="cursor-pointer hover:text-xl" onClick={handleShoppingCart}/>
+                        <div className={`${count == 0 ? "hidden" : "text-sm"} flex space-x-4 justify-center items-center`}>
+                        <RiDeleteBackLine className="cursor-pointer hover:text-lg" onClick={handleRemoveShoppingCart}/>
+                        <span >{count}</span>
+                        </div>
+                        </div>
                     </div>
                 </div>
             )

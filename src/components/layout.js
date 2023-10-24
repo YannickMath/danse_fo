@@ -17,7 +17,7 @@ export default function Layout({ children }) {
   };
 
   return (
-    <div >
+    <div  >
       <Drawer
         isDrawerOpen={isDrawerOpen}
         setIsDrawerOpen={setisDrawerOpen}
@@ -27,7 +27,7 @@ export default function Layout({ children }) {
         className="h-1/6 w-100% "
       />
       <main
-      className="p-2"
+      className=""
 
       >{children
 

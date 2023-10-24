@@ -81,18 +81,16 @@ body {
   transform: rotateY(20deg); /* Ajustez l'angle selon vos préférences */
 }
 
-.videoWrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* Aspect ratio */
-  padding-top: 25px;
-  height: 0;
-  overflow: hidden;
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.videoWrapper iframe {
-  position: absolute;
-  top: -80px; /* Play with this value to hide elements */
-  left: 0;
-  width: 100%;
-  height: calc(100% + 100px); /* Adjust based on the top value */
+.slide {
+  animation: slide 1s forwards;
 }

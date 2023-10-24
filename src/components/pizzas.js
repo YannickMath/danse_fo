@@ -40,7 +40,7 @@ const [pizzas, setPizzas] = useState([])
                     <div className="flex-col flex justify-center items-center text-center w-1/2 p-1 h-auto">
                         <h2>{pizza.name}</h2>
                         <p>{pizza.description}</p>
-                        <p>{pizza.price}</p>
+                        <p>{pizza.price} €</p>
                     </div>
                 </div>
             )

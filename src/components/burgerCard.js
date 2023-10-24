@@ -8,7 +8,7 @@ export default function BurgerCard() {
   };
 
   return (
-    <div class="h-full flex flex-col justify-around p-1 bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="h-full flex flex-col justify-around bg-black border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
       <Link href="/burgers" className="flex justify-center items-center">
         <img
           className="rounded-t-lg bg-cover max-h-[200px] w-full"
