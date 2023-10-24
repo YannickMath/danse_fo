@@ -18,7 +18,7 @@ export default function PizzaCard() {
       </Link>
       <div class="text-center  pb-5">
         <h5 className="text-xl text-white font-semibold tracking-tight text-gray-900 dark:text-white">
-          La pizza du mois ! La veggie
+          La pizza du mois ! La Veggie
         </h5>
         <div className="flex items-center sm:justify-around justify-center mt-2 p-2">
           {/* <span className="text-xl text-white font-bold text-gray-900 dark:text-white">

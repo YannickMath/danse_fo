@@ -59,7 +59,7 @@ export default function Drawer({
         >
           <div className="flex items-center justify-center space-x-2 ">
             <GrRestaurant size={30} className="text-2xl bounce2 " />
-            <h1 className="text-xl ">LATE NIGHT FOOD - DECOUVRIR NOS MENUS ET COMMANDEZ</h1>
+            <h1 className="text-xl ">Cliquez ici ! Découvrez nos menus et commandez</h1>
           </div>
         </button>
       </div>
@@ -101,7 +101,7 @@ export default function Drawer({
                   width={20}
                   height={20}
                 />
-                <span className="ml-3">Latnight Food - Home</span>
+                <span className="ml-3">Late Night Food - Home</span>
               </a>
             </li>
             <li>
@@ -136,7 +136,7 @@ export default function Drawer({
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/pizzas"
                     className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
                     onClick={toggleDrawer}
                   >

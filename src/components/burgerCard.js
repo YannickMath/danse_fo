@@ -18,7 +18,7 @@ export default function BurgerCard() {
       </Link>
       <div class="text-center  pb-5">
         <h5 className="text-xl text-white font-semibold tracking-tight text-gray-900 dark:text-white">
-          Le burger du mois ! BeefCrispy
+          Le burger du mois ! Le BeefCrispy
         </h5>
         <div className="flex items-center sm:justify-around justify-center mt-2 p-2">
           {/* <span className="text-xl text-white font-bold text-gray-900 dark:text-white">
