@@ -59,7 +59,9 @@ export default function Drawer({
         >
           <div className="flex items-center justify-center space-x-2 ">
             <GrRestaurant size={30} className="text-2xl bounce2 " />
-            <h1 className="text-xl ">Cliquez ici ! Découvrez nos menus et commandez</h1>
+            <h1 className="text-xl ">
+              Cliquez ici ! Découvrez nos menus et commandez
+            </h1>
           </div>
         </button>
       </div>
@@ -101,7 +103,9 @@ export default function Drawer({
                   width={20}
                   height={20}
                 />
-                <span className="ml-3 text-white cursor-pointer hover:text-black">Late Night Food - Home</span>
+                <span className="ml-3 text-white cursor-pointer hover:text-black">
+                  Late Night Food - Home
+                </span>
               </a>
             </li>
             <li>
@@ -182,7 +186,9 @@ export default function Drawer({
                 onClick={toggleDrawer}
               >
                 <BsFillBagFill />
-                <span className="flex-1 hover:text-black ml-3 text-white whitespace-nowrap">Panier</span>
+                <span className="flex-1 hover:text-black ml-3 text-white whitespace-nowrap">
+                  Panier
+                </span>
               </a>
             </li>
             <li>
@@ -207,7 +213,9 @@ export default function Drawer({
                 onClick={toggleDrawer}
               >
                 <PiSignInBold />
-                <span className="flex-1 text-white ml-3 whitespace-nowrap hover:text-black">Sign In</span>
+                <span className="flex-1 text-white ml-3 whitespace-nowrap hover:text-black">
+                  Sign In
+                </span>
               </Link>
             </li>
             <li>
@@ -217,7 +225,9 @@ export default function Drawer({
                 onClick={toggleDrawer}
               >
                 <SiGnuprivacyguard />
-                <span className="flex-1 hover:text-black ml-3 whitespace-nowrap text-white">Sign Up</span>
+                <span className="flex-1 hover:text-black ml-3 whitespace-nowrap text-white">
+                  Sign Up
+                </span>
               </Link>
             </li>
             <li>
@@ -227,7 +237,9 @@ export default function Drawer({
                 onClick={toggleDrawer}
               >
                 <AiOutlineLogout />
-                <span className="flex-1 hover:text-black ml-3 whitespace-nowrap text-white">Logout</span>
+                <span className="flex-1 hover:text-black ml-3 whitespace-nowrap text-white">
+                  Logout
+                </span>
               </a>
             </li>
             <li>

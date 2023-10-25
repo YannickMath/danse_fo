@@ -54,9 +54,9 @@ const [count, setCount] = useState(0)
                         <p>{burger.description}</p>
                         <div className="flex justify-around w-full text-right space-x-4 items-center">
                         <p className="w-full text-right">{burger.prix} €</p>
-                        <IoIosBasket className="cursor-pointer hover:text-xl" onClick={handleShoppingCart}/>
+                        <IoIosBasket className="cursor-pointer" onClick={handleShoppingCart}/>
                         <div className={`${count == 0 ? "hidden" : "text-sm"} flex space-x-4 justify-center items-center`}>
-                        <RiDeleteBackLine className="cursor-pointer hover:text-lg" onClick={handleRemoveShoppingCart}/>
+                        <RiDeleteBackLine className="cursor-pointer" onClick={handleRemoveShoppingCart}/>
                         <span >{count}</span>
                         </div>
                         </div>
