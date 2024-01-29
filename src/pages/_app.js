@@ -2,7 +2,6 @@ import Layout from "../components/layout";
 import "@/styles/globals.css";
 import "animate.css";
 import { Provider } from "react-redux";
-import { store } from "./store";
 import { persistStore, persistReducer } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import storage from "redux-persist/lib/storage";
