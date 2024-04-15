@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import BurgerCard from "@/components/burgerCard";
 import PizzaCard from "@/components/pizzaCard";
+import { Counter } from "./counter";
 
 export default function Home({ toggleDrawer }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ toggleDrawer }) {
         className="bg-[url('/hamburger.jpg')] bg-cover col-start-3 col-span-4 row-span-2 border border-gray-200   "
         alt="hamburger"
       ></div>
+      <Counter />
     </div>
   );
 }
