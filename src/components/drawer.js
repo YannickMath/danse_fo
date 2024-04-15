@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { HiOutlineLogout } from "react-icons/hi";
 import { PiSignInBold } from "react-icons/pi";
 import { AiOutlineLogout } from "react-icons/ai";
 import { RxCross1 } from "react-icons/rx";
@@ -93,7 +94,7 @@ export default function Drawer({
         <div className="py-4 overflow-y-auto">
           <ul className="space-y-2 font-medium">
             <li>
-              <a
+              <Link
                 onClick={goHome}
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group"
               >
@@ -106,7 +107,7 @@ export default function Drawer({
                 <span className="ml-3 text-white cursor-pointer hover:text-black">
                   Late Night Food - Home
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
               <button
@@ -139,36 +140,36 @@ export default function Drawer({
                   </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="/pizzas"
                     className="flex text-white hover:text-black items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group dark:text-white dark:hover:bg-gray-700"
                     onClick={toggleDrawer}
                   >
                     Pizzas
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex hover:text-black items-center text-white w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group dark:text-white dark:hover:bg-gray-700"
                     onClick={toggleDrawer}
                   >
                     Frites & Potatoes
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href="#"
                     className="flex hover:text-black items-center text-white w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group dark:text-white dark:hover:bg-gray-700"
                     onClick={toggleDrawer}
                   >
                     Boissons
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group"
                 onClick={toggleDrawer}
@@ -177,10 +178,10 @@ export default function Drawer({
                 <span className="flex-1 hover:text-black ml-3 text-white whitespace-nowrap">
                   Mon compte
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group"
                 onClick={toggleDrawer}
@@ -189,10 +190,10 @@ export default function Drawer({
                 <span className="flex-1 hover:text-black ml-3 text-white whitespace-nowrap">
                   Panier
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group"
                 onClick={toggleDrawer}
@@ -204,7 +205,7 @@ export default function Drawer({
                 {/* <span className="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-gray-800 bg-gray-100 rounded-full dark:bg-gray-700 dark:text-gray-300">
                   Pro
                 </span> */}
-              </a>
+              </Link>
             </li>
             <li>
               <Link
@@ -231,19 +232,19 @@ export default function Drawer({
               </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group"
                 onClick={toggleDrawer}
               >
-                <AiOutlineLogout />
+                <HiOutlineLogout />
                 <span className="flex-1 hover:text-black ml-3 whitespace-nowrap text-white">
                   Logout
                 </span>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white dark:hover:bg-gray-700 group"
                 onClick={toggleDrawer}
@@ -255,7 +256,7 @@ export default function Drawer({
                 {/* <span className="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   3
                 </span> */}
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

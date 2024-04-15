@@ -1,5 +1,6 @@
 import { GrRestaurant } from "react-icons/gr";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function BurgerCard() {
   const addToCart = () => {
@@ -10,7 +11,7 @@ export default function BurgerCard() {
   return (
     <div class="h-full flex flex-col justify-around bg-black border border-gray-200 shadow dark:bg-gray-800 dark:border-gray-700">
       <Link href="/burgers" className="flex justify-center items-center">
-        <img
+        <Image
           className="rounded-t-lg bg-cover max-h-[200px] w-full"
           src="/beefCrispy.jpg"
           alt="product image"
@@ -24,13 +25,13 @@ export default function BurgerCard() {
           {/* <span className="text-xl text-white font-bold text-gray-900 dark:text-white">
             €5
           </span> */}
-          <a
+          <Link
             onClick={addToCart}
             href="#"
             className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Acheter
-          </a>
+          </Link>
         </div>
       </div>
     </div>

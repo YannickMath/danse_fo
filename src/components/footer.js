@@ -6,7 +6,10 @@ export default function Footer() {
       <h1 className="w-1/2 flex justify-center">
         © 2023 [Latnight SAS]. Tous droits réservés.{" "}
       </h1>
-        <Link href="/CGU" className="w-1/2 flex justify-center">Conditions Générales d'Utilisation</Link>.
+      <Link href="/CGU" className="w-1/2 flex justify-center">
+        Conditions Générales d&aposUtilisation
+      </Link>
+      .
     </div>
   );
 }

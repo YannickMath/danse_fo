@@ -9,15 +9,15 @@ export default function Layout({ children }) {
   const toggleDrawer = () => {
     setisDrawerOpen(!isDrawerOpen);
   };
-  console.log("LayoutisDrawerOpen: ", isDrawerOpen);
+  // console.log("LayoutisDrawerOpen: ", isDrawerOpen);
 
   const toggleEcommerce = () => {
     setisDrawerOpenEcommerce(!isDrawerOpenEcommerce);
-    console.log("isDrawerOpenEcommerce: ", isDrawerOpenEcommerce);
+    // console.log("isDrawerOpenEcommerce: ", isDrawerOpenEcommerce);
   };
 
   return (
-    <div  >
+    <div>
       <Drawer
         isDrawerOpen={isDrawerOpen}
         setIsDrawerOpen={setisDrawerOpen}
@@ -26,12 +26,7 @@ export default function Layout({ children }) {
         isDrawerOpenEcommerce={isDrawerOpenEcommerce}
         className="h-1/6 w-100% "
       />
-      <main
-      className=""
-
-      >{children
-
-      }</main>
+      <main className="">{children}</main>
       <Footer className="h-0.5/6 " />
     </div>
   );

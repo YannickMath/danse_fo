@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Login() {
   return (
     <div className="flex h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
+        <Image
           className="mx-auto h-20 w-auto"
           src="Latnight-logos.jpeg"
           alt="Your Company"
@@ -43,12 +44,12 @@ export default function Login() {
                 Password
               </label>
               <div className="text-sm">
-                <a
+                <Link
                   href="#"
                   className="font-semibold text-indigo-600 hover:text-indigo-500"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </div>
             </div>
             <div className="mt-2">
@@ -74,7 +75,7 @@ export default function Login() {
         </form>
 
         <p className="mt-10 text-center text-sm text-gray-500">
-          You don't have already an account !{" "}
+          You don&apost have already an account !{" "}
           <Link
             href="/signup"
             className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"

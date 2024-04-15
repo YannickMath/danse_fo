@@ -1,8 +1,9 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -37,7 +38,7 @@ export default function Signup() {
 
       if (!response.ok) {
         // Traitez l'erreur ici
-        console.error('Erreur de réponse', response);
+        console.error("Erreur de réponse", response);
         return;
       }
 
@@ -48,17 +49,16 @@ export default function Signup() {
       setEmail("");
       setPassword("");
 
-      router.push('/');
-
+      router.push("/");
     } catch (error) {
       console.log(error);
     }
-  }
+  };
 
   return (
     <div className="flex h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <img
+        <Image
           className="mx-auto h-20 w-auto"
           src="Latnight-logos.jpeg"
           alt="Your Company"
